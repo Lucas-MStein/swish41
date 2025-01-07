@@ -1,14 +1,20 @@
 /* style.css */
+@font-face {
+    font-family: 'Basketball';
+    src: url('Basketball.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* Hintergrundfarbe der gesamten Seite */
 body {
     background-color: #f4f4f4;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url("https://cdn.vox-cdn.com/uploads/chorus_image/image/73334809/2149593082.0.jpg");
+    url("https://cdn.vox-cdn.com/uploads/chorus_image/image/73334809/2149593082.0.jpg");
     background-position: center; /* Zentriert das Bild */
     background-repeat: no-repeat; /* Verhindert Wiederholungen */
     background-size: cover; /* Bild skaliert und deckt den gesamten Bereich ab */
-    font-family: Basketball;
+    font-family: 'Basketball', sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
@@ -77,7 +83,7 @@ ul li {
 }
 
 nav ul li a {
-    font-family: Basketball;
+    font-family: 'Basketball', sans-serif;;
 }
 
 a:hover {
