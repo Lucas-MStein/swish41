@@ -1,5 +1,14 @@
 /* style.css */
 
+
+@font-face {
+    font-family: 'Basketball.otf';
+    src: url('/Users/lucas-mauricestein/PhpstormProjects/Website/Basketball.otf') format('otf'),
+    url('/Users/lucas-mauricestein/PhpstormProjects/Website/Basketball.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Hintergrundfarbe der gesamten Seite */
 body {
     background-color: #f4f4f4;
@@ -8,7 +17,7 @@ body {
     background-position: center; /* Zentriert das Bild */
     background-repeat: no-repeat; /* Verhindert Wiederholungen */
     background-size: cover; /* Bild skaliert und deckt den gesamten Bereich ab */
-    font-family: Basketball;
+    font-family: 'Basketball.otf';
     color: #333;
     margin: 0;
     padding: 0;
@@ -113,12 +122,15 @@ button:hover {
     flex: 1 1 200px; /* Basisbreite der Items und Flexibilität */
     padding: 15px;
     border: 1px solid #ddd;
-    border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für 3D-Effekt */
     font-size: 1.1em;
     color: #333;
     text-align: center;
+}
+
+.flex-item.box {
+    border-radius: 8px;
 }
 
 .flex-item:hover {
