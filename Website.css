@@ -159,10 +159,13 @@ button:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    @media (max-width: 768px) {
         .flex-container {
             flex-direction: column;
             padding: 0;
         }
+    .flex-item {
+        flex: 1 1 auto; /* Erlaubt, dass das Item flexibel in der Breite wächst */
+        width: 100%; /* Nimmt die gesamte Breite des Containers ein */
+    }
     }
 }
