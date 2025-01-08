@@ -1,4 +1,3 @@
-/* style.css */
 @font-face {
     font-family: 'Basketball';
     src: url('Basketball.otf') format('opentype');
@@ -112,11 +111,6 @@ button:hover {
     gap: 20px; /* Abstand zwischen den Absätzen */
     padding: 20px;
     background-color: #f4f4f9; /* Hintergrundfarbe für den Container */
-    background-size: cover; /* Bild skaliert proportional */
-    background-position: center; /* Bild wird zentriert */
-    background-repeat: no-repeat; /* Kein Wiederholen des Bildes */
-    overflow: hidden; /* Entfernt Überlappungen */
-    width: 100%; /* Verhindert horizontales Scrollen */
 }
 
 /* Flex-Item (Absätze) Stil */
@@ -166,10 +160,9 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .flex-container {
-        flex-direction: column; /* Inhalte untereinander stapeln */
+        flex-direction: column;
         align-items: center;
-        height: auto; /* Dynamische Höhe basierend auf dem Inhalt */
-        background-size: cover; /* Skaliert das Bild proportional */
-        background-position: center; /* Hintergrundbild bleibt zentriert */
+        height: 100%;
+        width: 100%;
     }
 }
