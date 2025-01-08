@@ -157,12 +157,14 @@ button:hover {
     text-align: center;
 }
 
+.video {
+    width: 100%;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
         .flex-container {
             flex-direction: column;
             padding: 0;
-            background-size: contain; /* Verhindert Beschneidung des Bildes */
-            background-position: top; /* Passt die Position des Bildes an */
         }
 }
