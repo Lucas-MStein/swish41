@@ -165,5 +165,9 @@ button:hover {
         align-items: center;
         height: 100%;
         width: 100%;
+        background-size: cover; /* Skaliert das Bild proportional und füllt den Container */
+        background-position: center; /* Zentriert das Bild */
+        background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+        overflow: hidden; /* Entfernt überlappende Bildbereiche */
     }
 }
