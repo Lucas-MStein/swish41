@@ -63,6 +63,20 @@
         <iframe class="video" src="https://www.youtube.com/embed/51CHNtNlFR8?si=ziJlNoWcZZsKfdZN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleButton = document.querySelector('.navbar-toggler');
+        const menu = document.querySelector('.navbar-menu');
+
+        toggleButton.addEventListener('click', function () {
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+            menu.classList.toggle('active');
+        });
+    });
+</script>
+
 </body>
     <footer>
         <p> 2024 Lucas-Maurice Stein. <br> Alle Rechte vorbehalten.</p>
