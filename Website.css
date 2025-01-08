@@ -158,6 +158,8 @@ button:hover {
 }
 
 .video {
+    height: 400px;
+    max-width: 700px;
     width: 100%;
 }
 
@@ -167,4 +169,7 @@ button:hover {
             flex-direction: column;
             padding: 0;
         }
+    .video {
+        height: 200px;
+    }
 }
