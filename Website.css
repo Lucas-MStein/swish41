@@ -107,11 +107,18 @@ button:hover {
 /* Flex-Container Stil */
 .flex-container {
     display: flex;
-    flex-wrap: wrap; /* Zeilenumbruch bei kleinen Bildschirmen */
-    justify-content: space-around; /* Verteilung der Elemente */
-    gap: 20px; /* Abstand zwischen den Absätzen */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Container füllt die Höhe */
+    width: 100%;
     padding: 20px;
-    background-color: #f4f4f9; /* Hintergrundfarbe für den Container */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://cdn.vox-cdn.com/uploads/chorus_image/image/73334809/2149593082.0.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
 }
 
 /* Flex-Item (Absätze) Stil */
@@ -135,19 +142,6 @@ button:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap; /* Zeilenumbruch bei kleinen Bildschirmen */
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px;
-    background-size: cover; /* Bild skaliert proportional */
-    background-position: center; /* Bild wird zentriert */
-    background-repeat: no-repeat; /* Kein Wiederholen des Bildes */
-    overflow: hidden; /* Entfernt Überlappungen */
-    width: 100%; /* Verhindert horizontales Scrollen */
-}
-
 /* Spezifische Stile für die Biografie */
 .bio {
     background-color: #8a9fdb;
@@ -167,10 +161,10 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .flex-container {
-        flex-direction: column; /* Inhalte untereinander stapeln */
-        align-items: center;
-        height: auto; /* Dynamische Höhe basierend auf dem Inhalt */
-        background-size: cover; /* Skaliert das Bild proportional */
-        background-position: center; /* Hintergrundbild bleibt zentriert */
+        padding: 10px;
+    }
+
+    h1, h2, h3, p {
+        font-size: 1em; /* Kleinere Schriftgröße */
     }
 }
