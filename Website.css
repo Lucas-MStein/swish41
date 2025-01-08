@@ -137,9 +137,15 @@ button:hover {
 
 .flex-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Zeilenumbruch bei kleinen Bildschirmen */
+    justify-content: space-around;
     gap: 20px;
     padding: 20px;
+    background-size: cover; /* Bild skaliert proportional */
+    background-position: center; /* Bild wird zentriert */
+    background-repeat: no-repeat; /* Kein Wiederholen des Bildes */
+    overflow: hidden; /* Entfernt Überlappungen */
+    width: 100%; /* Verhindert horizontales Scrollen */
 }
 
 /* Spezifische Stile für die Biografie */
@@ -161,13 +167,10 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .flex-container {
-        flex-direction: column;
+        flex-direction: column; /* Inhalte untereinander stapeln */
         align-items: center;
-        height: 100%;
-        width: 100%;
-        background-size: cover; /* Skaliert das Bild proportional und füllt den Container */
-        background-position: center; /* Zentriert das Bild */
-        background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
-        overflow: hidden; /* Entfernt überlappende Bildbereiche */
+        height: auto; /* Dynamische Höhe basierend auf dem Inhalt */
+        background-size: cover; /* Skaliert das Bild proportional */
+        background-position: center; /* Hintergrundbild bleibt zentriert */
     }
 }
