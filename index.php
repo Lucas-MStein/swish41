@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swish41</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Shrikhand", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-gray-200 text-gray-800">
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full z-10 bg-yellow-400 text-white shadow-lg">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo -->
+            <div class="text-lg font-bold">
+                <a href="index.php" class="hover:text-yellow-300 transition">Ubuntu presents: swish41</a>
+            </div>
+
+            <!-- Hamburger Menu (Mobile) -->
+            <div class="flex lg:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Desktop Navbar -->
+            <ul class="hidden lg:flex space-x-4">
+                <li>
+                    <a href="musik.php"
+                       class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-400 transition">
+                        Musik
+                    </a>
+                </li>
+                <li>
+                    <a href="about.php"
+                       class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-400 transition">
+                        Über mich
+                    </a>
+                </li>
+                <li>
+                    <a href="#standort"
+                       class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-400 transition">
+                        Leistungen
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.php"
+                       class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-400 transition">
+                        Kontakt
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden bg-yellow-400 lg:hidden">
+            <a href="musik.php" class="block px-4 py-2 hover:bg-yellow-300">Musik</a>
+            <a href="about.php" class="block px-4 py-2 hover:bg-yellow-300">Über mich</a>
+            <a href="#standort" class="block px-4 py-2 hover:bg-yellow-300">Leistungen</a>
+            <a href="contact.php" class="block px-4 py-2 hover:bg-yellow-300">Kontakt</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main class="pt-20"> <!-- Padding-Top, um die fixe Navbar auszugleichen -->
+    <!-- Hero Section 1 -->
+    <section id="massagen" class="relative bg-cover bg-center h-screen" style="background-image: url('images/Kleinstadt Cover 3.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
+            <div class="text-center text-white">
+                <h2 class="text-5xl font-bold mb-4 text-fuchsia-300">Willkommen bei swish41!</h2>
+                <p class="text-xl mb-6">Der Atze aus der Kleinstadt liefert Hitze mit seiner Musik.</p>
+                <a href="musik.php" class="px-6 py-3 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-400 transition">Click</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section 2 -->
+    <section id="informationen" class="relative bg-cover bg-center h-screen" style="background-image: url('images/twophones.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
+            <div class="text-center text-white">
+                <h2 class="text-5xl font-bold mb-4 text-fuchsia-300">Das bin ich</h2>
+                <p class="text-xl mb-6">Lerne mich besser kennen.</p>
+                <a href="about.php" class="px-6 py-3 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-400 transition">Click</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section 3 -->
+    <section id="standort" class="relative bg-cover bg-center h-screen" style="background-image: url('images/WW screaming in car.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
+            <div class="text-center text-white">
+                <h2 class="text-5xl font-bold mb-4 text-fuchsia-300">Das mache ich für dich</h2>
+                <p class="text-xl mb-6">Kostet auch gar nicht viel.</p>
+                <a href="services.php" class="px-6 py-3 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-400 transition">Click</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section 4 -->
+    <section id="öffnugszeiten" class="relative bg-cover bg-center h-screen" style="background-image: url('images/Resampled Realities.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
+            <div class="text-center text-white">
+                <h2 class="text-5xl font-bold mb-4 text-fuchsia-300">So erreichst du mich</h2>
+                <p class="text-xl mb-6">Unter folgendem Linktree bin ich erreichbar</p>
+                <a href="contact.php" class="px-6 py-3 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-400 transition">Click</a>
+            </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-purple-400 text-white py-4">
+    <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+        <!-- Linker Bereich: Text -->
+        <div class="flex-1 text-left">
+            <p>&copy; 2025 Lucas-Maurice Stein</p>
+        </div>
+
+        <!-- Mittlerer Bereich: Standort -->
+        <div class="flex-1 text-center">
+            <p>Herrengarten 39, 75365 Calw</p>
+        </div>
+
+        <!-- Rechter Bereich: Telefonnummer -->
+        <div class="flex-1 text-right">
+            <p>Telefon: <a href="tel:+4917647736812" class="underline hover:text-gray-200">0 176 477 368 12</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Nach-oben-Button -->
+<button id="backToTop" class="fixed bottom-6 right-6 bg-yellow-400 text-white px-4 py-2 rounded-full shadow-lg hover:bg-yellow-500 transition hidden">
+    ↑ Nach oben
+</button>
+
+<!-- JavaScript -->
+<script>
+    // Mobile Dropdown Menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Back to Top Button
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 1000) {
+            backToTopButton.classList.remove('hidden');
+        } else {
+            backToTopButton.classList.add('hidden');
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
