@@ -83,7 +83,7 @@
 <!-- Hero Section mit YouTube-Video -->
 <section class="relative text-black h-screen flex items-center justify-center">
     <div class="text-center">
-        <h2 class="text-4xl font-bold mb-6">Meine Geschichte</h2>
+        <h2 class="text-4xl font-bold mb-6 text-fuchsia-300">Meine Geschichte!</h2>
         <div class="relative w-full max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden shadow-lg">
             <iframe
                     class="w-full h-full"

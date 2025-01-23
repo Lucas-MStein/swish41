@@ -82,19 +82,14 @@
 <!-- Hero Section mit YouTube-Video -->
 <section class="relative text-black h-screen flex items-center justify-center">
     <div class="text-center">
-        <h2 class="text-4xl font-bold mb-6">Die Kunst der Thai-Massage</h2>
-        <div class="relative w-full max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden shadow-lg">
-            <iframe
-                    class="w-full h-full"
-                    src="https://www.youtube.com/embed/ooLlVWTPzO4?si=6ZQjq7e0FBNPUys7"
-                    title="YouTube Video Player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen>
-            </iframe>
+        <h2 class="text-4xl font-bold mb-6 text-fuchsia-300">So erreichst du mich!</h2>
+        <div class="max-w-lg mx-auto bg-white shadow-md rounded-lg p-6">
+            <a href="https://linktr.ee/lucasmstein" class="text-blue-500 underline hover:text-blue-700" target="_blank" rel="noopener noreferrer">
+                Linktree:
+            </a>
+            Links go epic
         </div>
-        <p class="mt-6 text-lg">Entdecken Sie die Ursprünge, Techniken und Vorteile der traditionellen Thai-Massage.</p>
+        <p class="mt-6 text-lg">Ich freue mich über eine Nachricht.</p>
     </div>
 </section>
 <!-- JavaScript -->

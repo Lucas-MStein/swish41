@@ -82,19 +82,21 @@
 <!-- Hero Section mit YouTube-Video -->
 <section class="relative text-black h-screen flex items-center justify-center">
     <div class="text-center">
-        <h2 class="text-4xl font-bold mb-6">Die Kunst der Thai-Massage</h2>
-        <div class="relative w-full max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden shadow-lg">
-            <iframe
-                class="w-full h-full"
-                src="https://www.youtube.com/embed/ooLlVWTPzO4?si=6ZQjq7e0FBNPUys7"
-                title="YouTube Video Player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
+        <h2 class="text-4xl font-bold mb-6 text-fuchsia-300">Das mache ich für dich!</h2>
+        <div class="max-w-lg mx-auto bg-white shadow-md rounded-lg p-6">
+            <ul class="list-disc pl-6">
+                <li class="text-gray-700">
+                    <span class="text-blue-500">Webdesign:</span> Ich erstelle moderne und benutzerfreundliche Websites.
+                </li>
+                <li class="text-gray-700">
+                    <span class="text-blue-500">Meinungsbildung:</span> Ob Sport, Musik oder Politik – ich überzeuge mit Argumenten.
+                </li>
+                <li class="text-gray-700">
+                    <span class="text-blue-500">Brainrot:</span> Egal ob du deinen Freunden einfach auf den Sack gehen willst oder tatsächlich einen Punkt rüber bringen willst - ich mache es.
+                </li>
+            </ul>
         </div>
-        <p class="mt-6 text-lg">Entdecken Sie die Ursprünge, Techniken und Vorteile der traditionellen Thai-Massage.</p>
+        <p class="mt-6 text-lg">Je nach Größe des Projekts bis zu 25€.</p>
     </div>
 </section>
 <!-- JavaScript -->

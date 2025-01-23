@@ -82,7 +82,7 @@
 <!-- Main Content -->
 <main class="pt-20"> <!-- Padding-Top, um die fixe Navbar auszugleichen -->
     <!-- Hero Section 1 -->
-    <section id="massagen" class="relative bg-cover bg-center h-screen" style="background-image: url('images/Kleinstadt Cover 3.jpg');">
+    <section id="massagen" class="relative bg-cover bg-top h-screen" style="background-image: url('images/w1900_h1445_x953_y725_DPA_bfunk_dpa_5FB46C002C09D9A0-5e0ecd50fc729e74.webp');">
         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
             <div class="text-center text-white">
                 <h2 class="text-5xl font-bold mb-4 text-fuchsia-300">Willkommen bei swish41!</h2>
@@ -135,7 +135,10 @@
 
         <!-- Mittlerer Bereich: Standort -->
         <div class="flex-1 text-center">
-            <p>Herrengarten 39, 75365 Calw</p>
+            <p>Herrengarten 39, 75365 Calw</p> <br>
+            <a href="impressum.php" class="text-blue-500 underline hover:text-blue-700">
+                Impressum
+            </a>
         </div>
 
         <!-- Rechter Bereich: Telefonnummer -->
