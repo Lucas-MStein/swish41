@@ -26,12 +26,9 @@
 <header class="fixed top-0 left-0 w-full z-10 bg-yellow-400 text-white shadow-lg">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-            <!-- Logo -->
             <div class="text-lg font-bold">
                 <a href="index.html" class="hover:text-yellow-300 underline transition">Ubuntu presents: swish41</a>
             </div>
-
-            <!-- Hamburger Menu (Mobile) -->
             <div class="flex lg:hidden">
                 <button id="menu-toggle" class="text-white focus:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,37 +36,13 @@
                     </svg>
                 </button>
             </div>
-
-            <!-- Desktop Navbar -->
             <ul class="hidden lg:flex space-x-4">
-                <li>
-                    <a href="musik.html"
-                       class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-400 transition">
-                        Musik
-                    </a>
-                </li>
-                <li>
-                    <a href="about.html"
-                       class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-400 transition">
-                        Über mich
-                    </a>
-                </li>
-                <li>
-                    <a href="services.html"
-                       class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-400 transition">
-                        Leistungen
-                    </a>
-                </li>
-                <li>
-                    <a href="contact.html"
-                       class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-400 transition">
-                        Kontakt
-                    </a>
-                </li>
+                <li><a href="musik.html" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-400 transition">Musik</a></li>
+                <li><a href="about.html" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-400 transition">Über mich</a></li>
+                <li><a href="services.html" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-400 transition">Leistungen</a></li>
+                <li><a href="contact.html" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-400 transition">Kontakt</a></li>
             </ul>
         </div>
-
-        <!-- Mobile Dropdown Menu -->
         <div id="mobile-menu" class="hidden bg-yellow-400 lg:hidden">
             <a href="musik.html" class="block px-4 py-2 hover:bg-yellow-300">Musik</a>
             <a href="about.html" class="block px-4 py-2 hover:bg-yellow-300">Über mich</a>
@@ -79,20 +52,45 @@
     </nav>
 </header>
 
-<!-- Grid mit gleichgroßen Quadraten -->
 <main class="mt-20 mr-4 ml-4">
+    <h2 class="text-2xl font-bold text-gray-700 text-center my-8 col-span-full">Junior-Year</h2>
+    <div class="relative bg-cover bg-top h-96" style="background-image: url('images/Resampled Realities.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4 hover:bg-opacity-75 hover:backdrop-blur-sm">
+            <h2 class="text-fuchsia-200 text-xl font-bold mb-2">Resampled Realities</h2>
+            <h3 class="text-indigo-300 text-lg mb-6">2026</h3>
+            <p class="text-white text-sm mb-8">Smoothe Soul Samples kombiniert auf modernen Drums. <br><br>Das Debütalbum.</p>
+        </div>
+    </div>
     <h2 class="text-2xl font-bold text-gray-700 text-center my-8 col-span-full">Sophomore-Year</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-        <!-- Massage 1 -->
-        <div class="relative bg-cover bg-top h-96" style="background-image: url('images/Resampled Realities.jpg');">
+        <!-- Track 1 (ursprünglich Track 3) -->
+        <div class="relative bg-cover bg-top h-96" style="background-image: url('images/Two-Man Game.jpg');">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4 hover:bg-opacity-75 hover:backdrop-blur-sm">
-                <h2 class="text-fuchsia-200 text-xl font-bold mb-2">Resampled Realities</h2>
+                <h2 class="text-fuchsia-200 text-xl font-bold mb-2">Two-Man Game</h2>
                 <h3 class="text-indigo-300 text-lg mb-6">Winter 2025</h3>
-                <p class="text-white text-sm mb-8">Smoothe Soul Samples kombiniert auf modernen Drums. <br> <br>
-                Das Debütalbum.</p>
+                <p class="text-white text-sm mb-8">Zwei asoziale Tracks mit BELA.</p>
+                <table class="table-auto text-indigo-300 border">
+                    <thead>
+                    <tr class="border-b text-emerald-400">
+                        <th class="px-4 py-2">Track:</th>
+                        <th class="px-4 py-2">Beat by:</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="text-slate-300">
+                        <td class="px-4 py-2">1. XTRA LONG</td>
+                        <td class="px-4 py-2">Bandit Luce</td>
+                    </tr>
+                    <tr class="text-slate-200">
+                        <td class="px-4 py-2">2. 112</td>
+                        <td class="px-4 py-2">noizy</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <!-- Massage 2 -->
+
+        <!-- Track 2 bleibt gleich -->
         <div class="relative bg-cover bg-top h-96" style="background-image: url('images/SYNERGY.jpg');">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4 hover:bg-opacity-75 hover:backdrop-blur-sm">
                 <h2 class="text-fuchsia-200 text-xl font-bold mb-2">SYNERGY</h2>
@@ -126,27 +124,28 @@
                 </table>
             </div>
         </div>
-        <!-- Track 3 -->
-        <div class="relative bg-cover bg-top h-96" style="background-image: url('images/Two-Man Game.jpg');">
+
+        <!-- Track 3 (ursprünglich Track 1) -->
+        <div class="relative bg-cover bg-center h-96" style="background-image: url('images/burrberg.jpg');">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4 hover:bg-opacity-75 hover:backdrop-blur-sm">
-                <h2 class="text-fuchsia-200 text-xl font-bold mb-2">Two-Man Game</h2>
-                <h3 class="text-indigo-300 text-lg mb-6">April 11, 2025</h3>
-                <p class="text-white text-sm mb-8">Zwei asoziale Tracks mit BELA.</p>
+                <h2 class="text-fuchsia-200 text-xl font-bold mb-2">burrberg</h2>
+                <h3 class="text-indigo-300 text-lg mb-6">Juni 07, 2025</h3>
+                <p class="text-white text-sm mb-8">Three-Pack mit Beats von Produzent burrberg.</p>
                 <table class="table-auto text-indigo-300 border">
                     <thead>
                     <tr class="border-b text-emerald-400">
-                        <th class="px-4 py-2">Track:</th>
-                        <th class="px-4 py-2">Beat by:</th>
+                        <th colspan="2" class="px-4 py-2 text-center">Tracks:</th>
                     </tr>
                     </thead>
                     <tbody>
+                    <tr class="text-sky-400">
+                        <td colspan="2" class="px-4 py-2">1. kein problem</td>
+                    </tr>
                     <tr class="text-sky-300">
-                        <td class="px-4 py-2">1. XTRA LONG</td>
-                        <td class="px-4 py-2">Bandit Luce</td>
+                        <td colspan="2" class="px-4 py-2">2. wasserfall</td>
                     </tr>
                     <tr class="text-sky-200">
-                        <td class="px-4 py-2">2. 112</td>
-                        <td class="px-4 py-2">noizy</td>
+                        <td colspan="2" class="px-4 py-2">3. red cups</td>
                     </tr>
                     </tbody>
                 </table>
@@ -164,7 +163,7 @@
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0NTx0jQ8ueK8SI8pJrUEL1?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
-        <!-- Massage 6 -->
+        <!-- Track 6 -->
         <div class="relative bg-cover bg-center h-96 bg-green-500">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4 hover:bg-opacity-75">
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/08FqYdRiVCIrynbLaf7FJW?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -173,19 +172,19 @@
 
         <h2 class="text-2xl font-bold text-gray-700 text-center my-8 col-span-full">Freshman-Year</h2>
 
-        <!-- Massage 7 -->
+        <!-- Track 7 -->
         <div class="relative bg-cover bg-center h-96 bg-orange-500">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4 hover:bg-opacity-75">
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/26R1cxLpZbSJLXJXKMptxD?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
-        <!-- Gutscheine -->
+        <!-- Track 8 -->
         <div class="relative bg-cover bg-center h-96 bg-blue-500">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4 hover:bg-opacity-75">
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0wtyKMBnWyO23IzYCSUGwX?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
-        <!-- Erotikmassagen -->
+        <!-- Track 9 -->
         <div class="relative bg-cover bg-center h-96 bg-fuchsia-300">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4 hover:bg-opacity-75">
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1jF7JrEl8p9RrqICNAA311?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
