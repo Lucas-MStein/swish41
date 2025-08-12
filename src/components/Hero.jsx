@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section
+    <section id={ "home"}
       className="h-screen bg-cover bg-center flex items-center justify-center text-center"
       style={{
         backgroundImage: `url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1600&q=80')`,

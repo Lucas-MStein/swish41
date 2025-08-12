@@ -10,7 +10,7 @@ const Header = () => {
 
     const menuItems = (
         <>
-            <a href="#hero" onClick={closeMenu} className="hover:text-gray-300">
+            <a href="#home" onClick={closeMenu} className="hover:text-gray-300">
                 Home
             </a>
             <a href="#music" onClick={closeMenu} className="hover:text-gray-300">
