@@ -18,7 +18,7 @@ const About = () => {
                     <h2 className="text-4xl font-bold mb-6">Über mich</h2>
                     <p className="text-gray-300 leading-relaxed mb-4">
                         Junger Baller aus dem Südwesten Deutschlands braucht fette Karren, iced-out
-                        Jesus-Pieces und eine Crib in den Hills von LA. Sheesh.
+                        Jesus Pieces und eine Crib in den Hills von LA. Sheesh.
                     </p>
                     <p className="text-gray-400 text-sm">
                         „Bin ich in der Pussy ist das Ziegensex.“
