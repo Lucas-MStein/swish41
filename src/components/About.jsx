@@ -7,7 +7,7 @@ const About = () => {
                 {/* Bild */}
                 <div className="md:w-1/2 w-full">
                     <img
-                        src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80"
+                        src="/about.jpg"
                         alt="Künstlerportrait"
                         className="rounded-xl shadow-lg"
                     />
@@ -17,13 +17,12 @@ const About = () => {
                 <div className="md:w-1/2 w-full">
                     <h2 className="text-4xl font-bold mb-6">Über mich</h2>
                     <p className="text-gray-300 leading-relaxed mb-4">
-                        joshwithoutc kombiniert atmosphärische Lo-Fi-Elemente mit ehrlichen Lyrics und
-                        modernen Synth-Sounds. Inspiriert von nächtlichen Spaziergängen durch Großstädte und
-                        dem Rauschen der Gedanken, entstehen Klangwelten zwischen Melancholie und Hoffnung.
+                        Junger Baller aus dem Südwesten Deutschlands braucht fette Karren, iced-out
+                        Jesus-Pieces und eine Crib in den Hills von LA. Sheesh.
                     </p>
                     <p className="text-gray-400 text-sm">
-                        „Musik ist für mich das Ventil, das Worte ersetzen kann.“
-                        — Josh
+                        „Bin ich in der Pussy ist das Ziegensex.“
+                        — swish41
                     </p>
                 </div>
             </div>

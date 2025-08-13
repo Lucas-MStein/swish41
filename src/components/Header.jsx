@@ -28,7 +28,7 @@ const Header = () => {
     return (
         <header className="fixed w-full top-0 z-50 bg-black bg-opacity-80 backdrop-blur border-b border-gray-800 text-white">
             <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-                <h1 className="text-xl font-bold">joshwithoutc</h1>
+                <h1 className="text-xl font-bold underline">Ubuntu presents: swish41</h1>
 
                 {/* Desktop-Navigation */}
                 <nav className="hidden md:flex space-x-6 text-sm">{menuItems}</nav>

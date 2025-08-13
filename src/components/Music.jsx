@@ -2,16 +2,16 @@ import React from "react";
 
 const releases = [
     {
-        title: "Trackhawk",
+        title: "XTRA LONG",
         year: 2025,
-        cover: "https://i.scdn.co/image/ab67616d0000b273fe0f3a0f1a65b541e5c7b45a",
-        spotify: "https://open.spotify.com/embed/track/0ioUErXFqx4eigNVzQEBpw?utm_source=generator",
+        cover: "/covers/XTRA LONG.jpg",
+        spotify: "https://open.spotify.com/embed/album/5lGHrdFDcunYs86nNsg1FX?utm_source=generator",
     },
     {
-        title: "Kein Candlelight",
+        title: "burrberg",
         year: 2025,
-        cover: "https://i.scdn.co/image/ab67616d0000b273da9b814b6dbf6e3dc79537a0",
-        spotify: "https://open.spotify.com/embed/track/5HuK4hVtqm0073j3gLSLUm?utm_source=generator",
+        cover: "/covers/burrberg.jpg",
+        spotify: "https://open.spotify.com/embed/track/4vFkYw4Oyo2muPcKzVG6ph?utm_source=generator",
     },
 ];
 
@@ -26,7 +26,7 @@ const Music = () => {
                             <img
                                 src={release.cover}
                                 alt={release.title}
-                                className="rounded-lg mb-4 w-full h-64 object-cover"
+                                className="rounded-lg mb-4 w-full h-64 object-contain"
                             />
                             <h3 className="text-2xl font-semibold">{release.title}</h3>
                             <p className="text-sm text-gray-400 mb-4">{release.year}</p>
