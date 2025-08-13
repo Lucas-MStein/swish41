@@ -21,7 +21,7 @@ const About = () => {
                         Jesus Pieces und eine Crib in den Hills von LA. Sheesh.
                     </p>
                     <p className="text-gray-400 text-sm">
-                        „Bin ich in der Pussy ist das Ziegensex.“
+                        „Atzen wollen Beef, ich serviere jetzt.“
                         — swish41
                     </p>
                 </div>
