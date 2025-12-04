@@ -7,7 +7,7 @@ const About = () => {
                 {/* Bild */}
                 <div className="md:w-1/2 w-full">
                     <img
-                        src="/about.jpg"
+                        src="/about.webp"
                         alt="Künstlerportrait"
                         className="rounded-xl shadow-lg"
                     />
