@@ -8,10 +8,10 @@ const releases = [
         spotify: "https://open.spotify.com/embed/album/5lGHrdFDcunYs86nNsg1FX?utm_source=generator",
     },
     {
-        title: "burrberg",
-        year: 2025,
-        cover: "/covers/burrberg.jpg",
-        spotify: "https://open.spotify.com/embed/track/4vFkYw4Oyo2muPcKzVG6ph?utm_source=generator",
+        title: "self-titled",
+        year: 2026,
+        cover: "/covers/self-titled.jpg",
+        spotify: "https://open.spotify.com/embed/track/3PCQww9EdClEhHGQNso6gT?si=31a7375a26aa4717",
     },
 ];
 
