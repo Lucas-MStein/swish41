@@ -15,7 +15,7 @@ const Contact = () => {
                         <FaEnvelope/>
                     </a>
                     <a
-                        href="https://www.instagram.com/lucasballout/"
+                        href="https://www.instagram.com/prodatlucas/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-pink-500"
@@ -33,7 +33,7 @@ const Contact = () => {
                         <FaYoutube/>
                     </a>
                     <a
-                        href="https://www.tiktok.com/@balloutlucas"
+                        href="https://www.tiktok.com/@prodatlucas"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-fuchsia-300"
