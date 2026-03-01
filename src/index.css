@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* wichtig für #anker bei fixed header */
+    scroll-padding-top: 96px; /* wichtig für #anker bei fixed header */
 }
 
 body {
