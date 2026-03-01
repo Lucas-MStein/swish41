@@ -83,10 +83,10 @@ const Header = () => {
                 <a
                     href="#home"
                     onClick={() => handleClick("#home")}
-                    className="font-display text-xl tracking-wide"
+                    className="font-display text-xl tracking-wide underline underline-offset-4"
                     aria-label="Zur Startsektion"
                 >
-                    swish41
+                    Ubuntu presents: swish41
                 </a>
 
                 {/* Desktop Navigation (Pills) */}
