@@ -32,7 +32,7 @@ const Contact = () => {
                 </h2>
 
                 <p className="mt-4 text-white/70 max-w-prose mx-auto">
-                    Für Anfragen, Booking oder Kollaborationen – direkt schreiben oder auf Social folgen.
+                    Für Anfragen, Booking oder Kollaborationen – direkt schreiben oder auf Social Media folgen.
                 </p>
 
                 {/* Email CTA */}
