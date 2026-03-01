@@ -2,56 +2,48 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <!-- Preload Hero Image (LCP) -->
-  <link
-          rel="preload"
-          as="image"
-          href="/hero.webp"
-          fetchpriority="high"
-  />
-
-  <!-- Optional: Logo preload -->
-  <link
-          rel="preload"
-          as="image"
-          href="/logo.png"
-  />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
 
   <!-- Primary Meta -->
   <title>swish41 – Musik, Releases & Kontakt</title>
   <meta name="description" content="swish41 – Der Atze aus der Kleinstadt. Releases, Musik & Kontakt auf einen Blick." />
-  <meta name="robots" content="index,follow" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://swish-41.de/" />
   <meta name="theme-color" content="#0b0f1a" />
+
+  <!-- Preload Hero (LCP) -->
+  <link rel="preload" as="image" href="/hero.webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="/logo.png" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png" />
 
-  <!-- Google Fonts Preconnect -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Font Stylesheet -->
   <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
 
   <!-- Open Graph -->
+  <meta property="og:locale" content="de_DE" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="swish41" />
   <meta property="og:title" content="swish41 – Musik & Releases" />
   <meta property="og:description" content="Releases, Streams & mehr von swish41." />
   <meta property="og:url" content="https://swish-41.de/" />
-  <meta property="og:image" content="https://swish-41.de/og-image.jpg" />
+
+  <meta property="og:image" content="https://swish-41.de/og-image.jpg?v=1" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="swish41 – Musik, Releases & Kontakt" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="swish41 – Musik & Releases" />
   <meta name="twitter:description" content="Neue Releases & Streams von swish41." />
-  <meta name="twitter:image" content="https://swish-41.de/og-image.jpg" />
+  <meta name="twitter:image" content="https://swish-41.de/og-image.jpg?v=1" />
 
-  <!-- Structured Data: Musician -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -61,9 +53,9 @@
       "genre": "Hip Hop",
       "description": "Musik & Releases von swish41.",
       "sameAs": [
-        "https://open.spotify.com/artist/15CTscuto936tp5eIPCdLi?si=Q0LWZwg5Td2uWfIbVTGnnw",
-        "https://www.instagram.com/prodatlucas",
-        "https://www.youtube.com/balloutlucas"
+        "https://open.spotify.com/artist/15CTscuto936tp5eIPCdLi",
+        "https://www.instagram.com/prodatlucas/",
+        "https://www.youtube.com/@balloutlucas"
       ]
     }
   </script>
@@ -74,11 +66,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'G-70HRNPW6DE');
+    gtag('config', 'G-70HRNPW6DE')
   </script>
-
 </head>
+
 <body>
 <div id="root"></div>
 <script type="module" src="/src/main.jsx"></script>
