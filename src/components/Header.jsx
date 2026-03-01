@@ -36,16 +36,14 @@ const Header = () => {
                     .filter((e) => e.isIntersecting)
                     .sort((a, b) => (b.intersectionRatio ?? 0) - (a.intersectionRatio ?? 0))[0];
 
-                if (visible?.target?.id) {
-                    setActive(`#${visible.target.id}`);
-                }
+                if (visible?.target?.id) setActive(`#${visible.target.id}`);
             },
             { threshold: [0.2, 0.4, 0.6], rootMargin: "-30% 0px -60% 0px" }
         );
 
         sections.forEach((sec) => observer.observe(sec));
         return () => observer.disconnect();
-    }, []);
+    }, []); // links ist konstant → ok
 
     // Body scroll lock + Cleanup
     useEffect(() => {
@@ -128,48 +126,49 @@ const Header = () => {
                 </button>
             </div>
 
-            {/* Mobile Overlay via Portal (bombensicheres Fullscreen Overlay) */}
+            {/* Mobile Overlay via Portal */}
             {menuOpen &&
                 createPortal(
                     <div
                         id="mobile-menu"
-                        className="md:hidden fixed inset-0 z-[60] bg-black/90 backdrop-blur-sm"
+                        className="md:hidden fixed inset-0 z-[9999]"
                         role="dialog"
                         aria-modal="true"
                     >
-                        {/* Klickfläche zum Schließen */}
-                        <button
-                            type="button"
-                            aria-label="Menü schließen"
-                            className="absolute inset-0 cursor-default"
+                        {/* Backdrop (immer unten) */}
+                        <div
+                            className="absolute inset-0 z-0 bg-black/90 backdrop-blur-sm"
                             onClick={() => setMenuOpen(false)}
                         />
 
-                        {/* X oben rechts */}
-                        <button
-                            type="button"
-                            aria-label="Menü schließen"
-                            onClick={() => setMenuOpen(false)}
-                            className="absolute right-5 top-5 rounded-full p-2 text-white/90 hover:bg-white/10
-                         focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
-                        >
-                            <HiX className="text-2xl" />
-                        </button>
+                        {/* Content Layer */}
+                        <div className="relative z-10 min-h-[100svh]">
+                            {/* Close Button (garantiert oben) */}
+                            <button
+                                type="button"
+                                aria-label="Menü schließen"
+                                onClick={() => setMenuOpen(false)}
+                                className="absolute right-5 top-5 z-20 rounded-full p-2 text-white/90 hover:bg-white/10
+                           focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+                            >
+                                <HiX className="text-2xl" />
+                            </button>
 
-                        {/* Menü */}
-                        <nav className="relative z-[70] flex min-h-[100svh] flex-col items-center justify-center gap-8 text-lg font-medium">
-                            {links.map((l) => (
-                                <a
-                                    key={l.href}
-                                    href={l.href}
-                                    onClick={() => handleClick(l.href)}
-                                    className="rounded-full px-6 py-3 bg-white/5 hover:bg-white/10 text-white transition
-                             focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
-                                >
-                                    {l.label}
-                                </a>
-                            ))}
-                        </nav>
+                            {/* Menü */}
+                            <nav className="flex min-h-[100svh] flex-col items-center justify-center gap-8 text-lg font-medium">
+                                {links.map((l) => (
+                                    <a
+                                        key={l.href}
+                                        href={l.href}
+                                        onClick={() => handleClick(l.href)}
+                                        className="rounded-full px-6 py-3 bg-white/5 hover:bg-white/10 text-white transition
+                               focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+                                    >
+                                        {l.label}
+                                    </a>
+                                ))}
+                            </nav>
+                        </div>
                     </div>,
                     document.body
                 )}
