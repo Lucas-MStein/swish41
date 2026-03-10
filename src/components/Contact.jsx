@@ -27,6 +27,7 @@ const Contact = () => {
         >
             <div className="container text-center">
 
+                {/* Headline */}
                 <h2 className="font-display text-4xl md:text-5xl tracking-tight">
                     Kontakt & Socials
                 </h2>
@@ -35,38 +36,37 @@ const Contact = () => {
                     Für Anfragen, Booking oder Kollaborationen – direkt schreiben oder auf Social Media folgen.
                 </p>
 
+                {/* Email CTA */}
                 <div className="mt-8 max-w-md mx-auto">
                     <a
                         href="mailto:lucasmauricestein@gmail.com"
                         className="flex items-center justify-center gap-3 p-6 rounded-2xl
-               bg-white/5 ring-1 ring-white/10 shadow-lg shadow-black/30
-               hover:bg-white/10 transition"
+            bg-white/5 ring-1 ring-white/10 shadow-lg shadow-black/30
+            hover:bg-white/10 transition"
                     >
                         <FaEnvelope className="text-xl" />
                         <span className="font-medium">
-      lucasmauricestein@gmail.com
-    </span>
+              lucasmauricestein@gmail.com
+            </span>
                     </a>
                 </div>
 
                 {/* Social Cards */}
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-                    {socials.map((social) => {
+                    {socials.map((social, index) => {
                         const Icon = social.icon;
+
                         return (
                             <a
-                                key={social.name}
+                                key={index}
                                 href={social.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`flex flex-col items-center justify-center gap-3 p-6 rounded-2xl
-                            bg-white/5 ring-1 ring-white/10 shadow-lg shadow-black/30
-                            transition ${social.hover}`}
+                                className={`flex items-center justify-center h-24 rounded-2xl
+                bg-white/5 ring-1 ring-white/10 shadow-lg shadow-black/30
+                transition ${social.hover}`}
                             >
                                 <Icon className="text-3xl" />
-                                <span className="text-sm font-medium">
-                  {social.name}
-                </span>
                             </a>
                         );
                     })}
