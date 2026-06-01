@@ -63,10 +63,6 @@ const Music = () => {
                                         className="absolute inset-0 bg-gradient-to-br from-frame/10 to-transparent pointer-events-none"
                                     />
 
-                                    {/* Track number */}
-                                    <div className="absolute top-4 left-4 font-mono text-xs text-accent/70 tracking-wider">
-                                        {number}
-                                    </div>
                                 </a>
 
                                 {/* Content */}
