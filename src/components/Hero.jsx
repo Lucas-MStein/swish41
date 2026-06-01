@@ -4,37 +4,71 @@ const Hero = () => {
     return (
         <section
             id="home"
-            className="relative flex items-center justify-center text-center px-4 min-h-[calc(100svh-80px)] md:min-h-[100svh] bg-cover bg-center overflow-hidden"
-            style={{ backgroundImage: `url('/hero.webp')` }}
+            className="min-h-[90vh] flex items-center px-4 pt-12 pb-20"
         >
-            {/* Subtiles Overlay für bessere Lesbarkeit */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/70" />
+            <div className="max-w-6xl w-full mx-auto">
+                <div className="grid md:grid-cols-5 gap-10 md:gap-12 items-center">
+                    {/* Artist Image */}
+                    <div className="md:col-span-2">
+                        <div className="relative aspect-square border-2 border-frame shadow-offset overflow-hidden">
+                            <img
+                                src="/hero.webp"
+                                alt="swish41 Künstlerbild"
+                                className="w-full h-full object-cover"
+                                loading="eager"
+                                fetchpriority="high"
+                            />
 
-            <div
-                className="relative z-10 w-full max-w-sm sm:max-w-md md:max-w-xl mx-auto rounded-2xl
-                   bg-white/10 backdrop-blur-sm border border-white/10 shadow-xl shadow-black/30
-                   p-6 sm:p-8 md:p-10"
-            >
-                <img
-                    src="/logo.png"
-                    alt="swish41 Logo"
-                    className="mx-auto mb-4 w-40 sm:w-44 md:w-64"
-                    loading="eager"
-                    fetchpriority="high"
-                />
+                            {/* Decorative corner markers */}
+                            <span
+                                aria-hidden="true"
+                                className="absolute -top-2 -left-2 w-4 h-4 border-l-2 border-t-2 border-accent"
+                            />
+                            <span
+                                aria-hidden="true"
+                                className="absolute -bottom-2 -right-2 w-4 h-4 border-r-2 border-b-2 border-accent"
+                            />
+                        </div>
+                    </div>
 
-                <p className="text-base sm:text-lg md:text-xl text-white/85 leading-relaxed mb-6">
-                    Der Atze aus der Kleinstadt liefert Hitze aus dem Kinderzimmer.
-                </p>
+                    {/* Hero Content */}
+                    <div className="md:col-span-3 space-y-6">
+                        <div>
+                            <p className="font-mono text-xs tracking-[0.4em] uppercase text-accent mb-4">
+                                :::ARTIST
+                            </p>
+                            <h1>
+                                <img
+                                    src="/logo.png"
+                                    alt="swish41"
+                                    className="w-48 sm:w-56 md:w-64 h-auto"
+                                    loading="eager"
+                                    fetchpriority="high"
+                                />
+                            </h1>
+                        </div>
 
-                <a
-                    href="#music"
-                    className="inline-flex items-center justify-center bg-white text-black font-semibold px-6 py-3 rounded-full
-                     hover:bg-gray-200 active:scale-[0.99] transition w-full sm:w-auto
-                     focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-                >
-                    Jetzt anhören
-                </a>
+                        <div className="border-l-4 border-accent/40 pl-6">
+                            <p className="text-2xl md:text-3xl leading-tight tracking-tight text-cream">
+                                Der Atze aus der Kleinstadt liefert Hitze aus dem Kinderzimmer.
+                            </p>
+                        </div>
+
+                        <div className="pt-2">
+                            <a
+                                href="#music"
+                                className="inline-block px-6 py-3 bg-accent text-deep font-mono text-sm uppercase tracking-wider
+                                shadow-offset-cta
+                                hover:bg-accent-bright
+                                active:translate-x-[2px] active:translate-y-[2px] active:shadow-none
+                                transition-all
+                                focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright focus-visible:ring-offset-2 focus-visible:ring-offset-coffee"
+                            >
+                                /// Jetzt anhören
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );

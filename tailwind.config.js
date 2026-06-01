@@ -4,28 +4,37 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "1.5rem",
+      padding: "1rem",
     },
 
     extend: {
       colors: {
-        primary: "#0b0f1a",
-        accent: "#ff0055",
-        muted: "#94a3b8",
+        coffee: "#1a1410",
+        deep: "#0f0b08",
+        surface: "#2a1f15",
+        frame: "#3d2f1f",
+        accent: "#d4a574",
+        "accent-bright": "#e8c492",
+        cream: "#e8e3dd",
       },
 
       fontFamily: {
-        display: ["'Patua One'", "sans-serif"],
-        sans: ["system-ui", "sans-serif"],
-      },
-
-      borderRadius: {
-        xl: "1rem",
-        "2xl": "1.5rem",
+        mono: [
+          "'JetBrains Mono'",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "monospace",
+        ],
       },
 
       boxShadow: {
-        soft: "0 15px 50px rgba(0,0,0,0.25)",
+        offset: "8px 8px 0px 0px rgba(212,165,116,0.2)",
+        "offset-md": "6px 6px 0px 0px rgba(212,165,116,0.15)",
+        "offset-md-hover": "6px 6px 0px 0px rgba(212,165,116,0.3)",
+        "offset-sm": "4px 4px 0px 0px rgba(212,165,116,0.15)",
+        "offset-sm-hover": "4px 4px 0px 0px rgba(212,165,116,0.3)",
+        "offset-cta": "4px 4px 0px 0px rgba(61,47,31,0.6)",
       },
     },
   },

@@ -1,11 +1,10 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 96px; /* wichtig für #anker bei fixed header */
+    scroll-padding-top: 72px;
 }
 
 body {
@@ -14,10 +13,4 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-@layer base {
-    h1, h2, h3, h4 {
-        @apply font-display;
-    }
 }

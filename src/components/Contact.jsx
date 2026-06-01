@@ -1,77 +1,78 @@
 import React from "react";
-import { FaInstagram, FaYoutube, FaEnvelope, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
 
 const socials = [
     {
         url: "https://www.instagram.com/prodatlucas/",
         icon: FaInstagram,
-        hover: "hover:bg-pink-500/20 hover:text-pink-400",
+        label: "Instagram",
     },
     {
         url: "https://www.youtube.com/@balloutlucas",
         icon: FaYoutube,
-        hover: "hover:bg-red-500/20 hover:text-red-400",
+        label: "YouTube",
     },
     {
         url: "https://www.tiktok.com/@prodatlucas",
         icon: FaTiktok,
-        hover: "hover:bg-fuchsia-500/20 hover:text-fuchsia-300",
+        label: "TikTok",
     },
 ];
 
 const Contact = () => {
     return (
-        <section
-            id="contact"
-            className="bg-primary text-white py-20 border-t border-white/5"
-        >
-            <div className="container text-center">
-
-                {/* Headline */}
-                <h2 className="font-display text-4xl md:text-5xl tracking-tight">
-                    Kontakt & Socials
-                </h2>
-
-                <p className="mt-4 text-white/70 max-w-prose mx-auto">
-                    Für Anfragen, Booking oder Kollaborationen – direkt schreiben oder auf Social Media folgen.
-                </p>
-
-                {/* Email CTA */}
-                <div className="mt-8 max-w-md mx-auto">
-                    <a
-                        href="mailto:lucasmauricestein@gmail.com"
-                        className="flex items-center justify-center gap-3 p-6 rounded-2xl
-            bg-white/5 ring-1 ring-white/10 shadow-lg shadow-black/30
-            hover:bg-white/10 transition"
-                    >
-                        <FaEnvelope className="text-xl" />
-                        <span className="font-medium">
-              lucasmauricestein@gmail.com
-            </span>
-                    </a>
+        <section id="contact" className="bg-deep/40 py-20 px-4">
+            <div className="max-w-6xl mx-auto space-y-10">
+                {/* Section Header */}
+                <div className="flex items-baseline gap-4">
+                    <h2 className="font-mono text-4xl md:text-5xl tracking-tighter">
+                        Kontakt &amp; Socials
+                    </h2>
+                    <div
+                        aria-hidden="true"
+                        className="flex-1 h-px bg-frame/40 mt-4"
+                    />
                 </div>
 
-                {/* Social Cards */}
-                <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-                    {socials.map((social, index) => {
-                        const Icon = social.icon;
+                {/* Intro */}
+                <p className="text-base md:text-lg text-cream/70 max-w-2xl leading-relaxed">
+                    Für Anfragen, Booking oder Kollaborationen – direkt schreiben oder
+                    auf Social Media folgen.
+                </p>
 
+                {/* Social Cards */}
+                <div className="flex flex-wrap justify-center gap-4 pt-2">
+                    {socials.map((social) => {
+                        const Icon = social.icon;
                         return (
                             <a
-                                key={index}
+                                key={social.url}
                                 href={social.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`flex items-center justify-center h-24 rounded-2xl
-                bg-white/5 ring-1 ring-white/10 shadow-lg shadow-black/30
-                transition ${social.hover}`}
+                                aria-label={social.label}
+                                className="group w-20 h-20 border-2 border-frame bg-surface
+                   flex items-center justify-center
+                   shadow-offset-sm hover:shadow-offset-sm-hover hover:border-accent
+                   transition-all
+                   focus:outline-none focus-visible:border-accent focus-visible:shadow-offset-sm-hover"
                             >
-                                <Icon className="text-3xl" />
+                                <Icon className="text-3xl text-cream/60 group-hover:text-accent transition-colors" />
                             </a>
                         );
                     })}
                 </div>
 
+                {/* Email */}
+                <div className="text-center">
+                    <a
+                        href="mailto:lucasmauricestein@gmail.com"
+                        className="font-mono text-sm md:text-base text-cream hover:text-accent transition-colors tracking-wider
+                       focus:outline-none focus-visible:text-accent"
+                    >
+                        lucasmauricestein@gmail.com
+                    </a>
+                </div>
             </div>
         </section>
     );
