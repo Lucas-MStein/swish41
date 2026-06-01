@@ -2,25 +2,16 @@ import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 
+const links = [
+    { href: "#home", label: "Home" },
+    { href: "#music", label: "Releases" },
+    { href: "#about", label: "About" },
+    { href: "#contact", label: "Kontakt" },
+];
+
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
     const [active, setActive] = useState("#home");
-
-    const links = [
-        { href: "#home", label: "Home" },
-        { href: "#music", label: "Releases" },
-        { href: "#about", label: "About" },
-        { href: "#contact", label: "Kontakt" },
-    ];
-
-    // Header-Background beim Scroll
-    useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 10);
-        onScroll();
-        window.addEventListener("scroll", onScroll, { passive: true });
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
 
     // Active Section Highlight
     useEffect(() => {
@@ -34,7 +25,10 @@ const Header = () => {
             (entries) => {
                 const visible = entries
                     .filter((e) => e.isIntersecting)
-                    .sort((a, b) => (b.intersectionRatio ?? 0) - (a.intersectionRatio ?? 0))[0];
+                    .sort(
+                        (a, b) =>
+                            (b.intersectionRatio ?? 0) - (a.intersectionRatio ?? 0)
+                    )[0];
 
                 if (visible?.target?.id) setActive(`#${visible.target.id}`);
             },
@@ -43,9 +37,9 @@ const Header = () => {
 
         sections.forEach((sec) => observer.observe(sec));
         return () => observer.disconnect();
-    }, []); // links ist konstant → ok
+    }, []);
 
-    // Body scroll lock + Cleanup
+    // Body scroll lock when mobile menu is open
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : "";
         return () => {
@@ -53,7 +47,7 @@ const Header = () => {
         };
     }, [menuOpen]);
 
-    // Escape schließt Menü
+    // Escape closes mobile menu
     useEffect(() => {
         if (!menuOpen) return;
         const onKeyDown = (e) => {
@@ -69,28 +63,21 @@ const Header = () => {
     };
 
     return (
-        <header
-            className={[
-                "fixed w-full top-0 z-50 text-white",
-                "transition-all duration-300",
-                scrolled
-                    ? "bg-black/80 backdrop-blur-lg border-b border-white/10"
-                    : "bg-black/50 backdrop-blur-md",
-            ].join(" ")}
-        >
-            <div className="container flex justify-between items-center py-4">
+        <header className="sticky top-0 z-40 bg-coffee/95 backdrop-blur-sm border-b border-frame/40">
+            <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
                 {/* Brand */}
                 <a
                     href="#home"
                     onClick={() => handleClick("#home")}
-                    className="font-display text-xl tracking-wide underline underline-offset-4"
+                    className="font-mono text-xs tracking-wider uppercase text-cream/70 hover:text-accent transition-colors
+                     focus:outline-none focus-visible:text-accent"
                     aria-label="Zur Startsektion"
                 >
-                    Ubuntu presents: swish41
+                    ///Ubuntu presents: swish41
                 </a>
 
-                {/* Desktop Navigation (Pills) */}
-                <nav className="hidden md:flex items-center gap-2 text-sm">
+                {/* Desktop Navigation */}
+                <nav className="hidden md:flex items-center gap-6 font-mono text-xs uppercase tracking-wider">
                     {links.map((l) => {
                         const isActive = active === l.href;
                         return (
@@ -99,11 +86,11 @@ const Header = () => {
                                 href={l.href}
                                 onClick={() => handleClick(l.href)}
                                 className={[
-                                    "px-4 py-2 rounded-full transition duration-200",
-                                    "focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30",
+                                    "transition-colors",
+                                    "focus:outline-none focus-visible:text-accent",
                                     isActive
-                                        ? "bg-white/15 text-white"
-                                        : "text-white/70 hover:bg-white/10 hover:text-white",
+                                        ? "text-accent"
+                                        : "text-cream/50 hover:text-accent",
                                 ].join(" ")}
                             >
                                 {l.label}
@@ -116,8 +103,8 @@ const Header = () => {
                 <button
                     type="button"
                     onClick={() => setMenuOpen((v) => !v)}
-                    className="md:hidden text-2xl rounded-full p-2 hover:bg-white/10 transition
-                     focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+                    className="md:hidden text-2xl p-1 text-cream/70 hover:text-accent transition-colors
+                     focus:outline-none focus-visible:text-accent"
                     aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
                     aria-expanded={menuOpen}
                     aria-controls="mobile-menu"
@@ -135,38 +122,46 @@ const Header = () => {
                         role="dialog"
                         aria-modal="true"
                     >
-                        {/* Backdrop (immer unten) */}
+                        {/* Backdrop */}
                         <div
-                            className="absolute inset-0 z-0 bg-black/90 backdrop-blur-sm"
+                            className="absolute inset-0 z-0 bg-coffee/95 backdrop-blur-sm"
                             onClick={() => setMenuOpen(false)}
                         />
 
                         {/* Content Layer */}
                         <div className="relative z-10 min-h-[100svh]">
-                            {/* Close Button (garantiert oben) */}
+                            {/* Close Button */}
                             <button
                                 type="button"
                                 aria-label="Menü schließen"
                                 onClick={() => setMenuOpen(false)}
-                                className="absolute right-5 top-5 z-20 rounded-full p-2 text-white/90 hover:bg-white/10
-                           focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+                                className="absolute right-5 top-5 z-20 p-2 text-cream/80 hover:text-accent transition-colors
+                           focus:outline-none focus-visible:text-accent"
                             >
                                 <HiX className="text-2xl" />
                             </button>
 
-                            {/* Menü */}
-                            <nav className="flex min-h-[100svh] flex-col items-center justify-center gap-8 text-lg font-medium">
-                                {links.map((l) => (
-                                    <a
-                                        key={l.href}
-                                        href={l.href}
-                                        onClick={() => handleClick(l.href)}
-                                        className="rounded-full px-6 py-3 bg-white/5 hover:bg-white/10 text-white transition
-                               focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
-                                    >
-                                        {l.label}
-                                    </a>
-                                ))}
+                            {/* Menu */}
+                            <nav className="flex min-h-[100svh] flex-col items-center justify-center gap-6 font-mono text-sm uppercase tracking-wider">
+                                {links.map((l) => {
+                                    const isActive = active === l.href;
+                                    return (
+                                        <a
+                                            key={l.href}
+                                            href={l.href}
+                                            onClick={() => handleClick(l.href)}
+                                            className={[
+                                                "px-6 py-3 border-2 transition-all",
+                                                "focus:outline-none",
+                                                isActive
+                                                    ? "border-accent text-accent shadow-offset-sm"
+                                                    : "border-frame text-cream/70 hover:border-accent hover:text-accent hover:shadow-offset-sm",
+                                            ].join(" ")}
+                                        >
+                                            {l.label}
+                                        </a>
+                                    );
+                                })}
                             </nav>
                         </div>
                     </div>,
