@@ -3,7 +3,7 @@ import { FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
 
 const socials = [
     {
-        url: "https://www.instagram.com/prodatlucas/",
+        url: "https://www.instagram.com/swishfourone/",
         icon: FaInstagram,
         label: "Instagram",
     },
@@ -13,7 +13,7 @@ const socials = [
         label: "YouTube",
     },
     {
-        url: "https://www.tiktok.com/@prodatlucas",
+        url: "https://www.tiktok.com/@swishfourone",
         icon: FaTiktok,
         label: "TikTok",
     },
